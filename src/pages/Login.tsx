@@ -5,6 +5,8 @@ import {
 import React from 'react';
 
 export default (props: any): JSX.Element => {
+
+    console.log('LoginPage', props)
     return (
         <IonPage>
             <IonHeader>

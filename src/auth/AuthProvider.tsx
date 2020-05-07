@@ -1,6 +1,6 @@
 import React from "react";
-import * as Auth0 from "auth0-js";
-import * as historyLib from 'history';
+import Auth0 from "auth0-js";
+import {createBrowserHistory} from 'history';
 import {AUTH_CONFIG} from "./auth.config";
 
 import { Plugins } from '@capacitor/core';
@@ -9,7 +9,7 @@ import {IonApp} from "@ionic/react";
 import {Redirect, Route, Switch} from "react-router-dom";
 const { Storage } = Plugins;
 
-const history = historyLib.createBrowserHistory();
+const history = createBrowserHistory();
 
 const auth0 = new Auth0.WebAuth({
     clientID: AUTH_CONFIG.clientId,
@@ -178,6 +178,7 @@ export const AuthProvider: React.FC = (props)=> {
                         <Route
                             path="/callback"
                             render={(props) => {
+                                console.log('adasdas', props)
                                 if (props) {
                                     const location = props.location
                                     if (/access_token|id_token|error/.test(location.hash)) {

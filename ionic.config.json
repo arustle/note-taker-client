@@ -1,7 +1,0 @@
-{
-  "name": "note-taker",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react"
-}

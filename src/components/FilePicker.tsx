@@ -1,4 +1,4 @@
-import React, {ChangeEvent} from 'react';
+import React from 'react';
 import './ExploreContainer.css';
 import {IonButton, IonIcon} from "@ionic/react";
 import {folderOpenOutline} from "ionicons/icons";
@@ -14,7 +14,7 @@ const FilePicker: React.FC<FilePickerProps> = ({onSelect}) => {
     const inputRef = React.useRef<HTMLInputElement>(null);
 
 
-    const pickFiles = (fileSelectEvent: ChangeEvent<HTMLInputElement>) => {
+    const pickFiles = (fileSelectEvent: React.ChangeEvent<HTMLInputElement>) => {
         const selFiles = inputRef.current?.files;
         if (!selFiles?.length) return;
         const attachments: Attachment[] = Array.from(selFiles).map(file => {

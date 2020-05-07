@@ -1,12 +1,13 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
+// const IonTabs = require('@ionic/react');
 import {
     IonIcon,
     IonLabel,
     IonRouterOutlet,
     IonTabBar,
     IonTabButton,
-    IonTabs
+    IonTabs,
 } from '@ionic/react';
 import {listOutline, homeOutline} from 'ionicons/icons';
 import Home from './pages/Home';
@@ -44,6 +45,7 @@ const App: React.FC<any> = () => {
 
 
 
+    // @ts-ignore
     return (
         <IonTabs>
             <IonRouterOutlet>

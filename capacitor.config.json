@@ -1,8 +1,8 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "note-taker",
+  "appId": "com.example.app",
+  "appName": "note-taker-client",
   "bundledWebRuntime": false,
-  "npmClient": "npm",
-  "webDir": "build",
+  "npmClient": "yarn",
+  "webDir": "www",
   "cordova": {}
 }

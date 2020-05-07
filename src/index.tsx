@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import App from "./App";
 import {AuthProvider} from "./auth/AuthProvider";
 
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
 
-defineCustomElements(window);
+defineCustomElements(window).then();
 // ReactDOM.render(<AuthProvider><App /></AuthProvider>, document.getElementById('root'));
 ReactDOM.render(<AuthProvider><App /></AuthProvider>, document.getElementById('root'));
 

@@ -30,7 +30,7 @@ import {GetUploadInfoDto} from "../api/dtos/GetUploadInfoDto";
 import useUploader from "../hooks/useUploader";
 import {generateCreateRecordDto} from "../api/dtos/CreateRecordDto";
 
-import * as historyLib from 'history';
+import historyLib from 'history';
 
 const RecordView: React.FC<{ record: Record, history: historyLib.History }> = ({record, history}) => {
     const { takePhoto } = usePhotoGallery();
