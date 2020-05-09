@@ -162,6 +162,7 @@ const useProvideAuth = (): ProvideAuth => {
 
 export const AuthContext = React.createContext<any>(null);
 export const useAuth = (): ProvideAuth => {
+    console.log('aaaaa', React.useContext(AuthContext))
     return React.useContext(AuthContext);
 }
 
@@ -178,7 +179,6 @@ export const AuthProvider: React.FC = (props)=> {
                         <Route
                             path="/callback"
                             render={(props) => {
-                                console.log('adasdas', props)
                                 if (props) {
                                     const location = props.location
                                     if (/access_token|id_token|error/.test(location.hash)) {
