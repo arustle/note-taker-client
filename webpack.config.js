@@ -3,6 +3,11 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 
+console.log('API_ENDPOINT', process.env.API_ENDPOINT)
+console.log('CLIENT_ID', process.env.CLIENT_ID)
+console.log('DOMAIN', process.env.DOMAIN)
+console.log('REDIRECT_URI', process.env.REDIRECT_URI)
+
 module.exports = {
     mode: "production",
 
