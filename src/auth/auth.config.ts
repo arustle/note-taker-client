@@ -7,5 +7,6 @@ export const apiEndpoint = `https://api.measuringchange.com/dev`
 export const AUTH_CONFIG = {
   clientId: 'jaGPHsP26hXndaxXddaLR4jN2wmqYsZZ',
   domain: 'dev-ch11m2eo.auth0.com',
-  redirectUri: 'http://localhost:3000/callback',
+  // redirectUri: 'http://localhost:3000/callback',
+  redirectUri: 'https://measuringchange.com/callback',
 }
