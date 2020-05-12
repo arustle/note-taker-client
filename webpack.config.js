@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     mode: "production",
@@ -56,6 +57,12 @@ module.exports = {
     },
 
     plugins: [
+        new webpack.DefinePlugin({
+            'process.env.API_ENDPOINT': JSON.stringify(process.env.API_ENDPOINT),
+            'process.env.CLIENT_ID': JSON.stringify(process.env.CLIENT_ID),
+            'process.env.DOMAIN': JSON.stringify(process.env.DOMAIN),
+            'process.env.REDIRECT_URI': JSON.stringify(process.env.REDIRECT_URI)
+        }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             hash: true,
