@@ -33,7 +33,7 @@
     "@ionic/react-hooks": "^0.0.6",
     "@ionic/react-router": "^5.1.0",
     "auth0-js": "^9.13.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "history": "^4.10.1",
     "ionicons": "^5.0.1",
     "moment": "^2.25.3",
